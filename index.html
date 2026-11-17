@@ -1,74 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEFF MUTETHIA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jeff Mutethia – Managing Director, Arribion Technologies</title>
+<meta name="description" content="Jeff Mutethia builds fast, clear websites for businesses in Kenya with M-Pesa, booking and AI integration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playpen+Sans:wght@100..800&family=Saira:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --ink:#1c1c1c; --muted:#6e6e6e; --line:#e6e6e6; --accent:#2845e8;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121212;--ink:#ececec;--muted:#9a9a9a;--line:#2a2a2a;--accent:#7f95ff;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121212;--ink:#ececec;--muted:#9a9a9a;--line:#2a2a2a;--accent:#7f95ff;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:.25em;text-decoration-thickness:1px;transition:text-decoration-color .15s,color .15s}
+a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:2rem 0}
+header .name{font-weight:600;text-decoration:none}
+nav{display:flex;gap:1.5rem;align-items:center}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+#theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:.25rem .75rem;font:inherit;font-size:.875rem;cursor:pointer}
+#theme:hover{color:var(--ink);border-color:var(--ink)}
+
+.hero{padding:7rem 0 6rem}
+.hero h1{
+  font-size:clamp(2.1rem,5.6vw,4rem);line-height:1.1;letter-spacing:-.03em;
+  font-weight:500;margin:0;max-width:19ch;
+}
+.hero h1 span{color:var(--muted)}
+.hero p{margin:2rem 0 0;color:var(--muted);max-width:44ch;font-size:1.125rem}
+
+section{display:grid;grid-template-columns:12rem 1fr;gap:1.5rem;padding:2.5rem 0;border-top:1px solid var(--line)}
+section>h2{margin:0;font-size:1rem;font-weight:500;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:1fr auto;gap:.25rem 2rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.list li:first-child{padding-top:0}
+.list li:last-child{border-bottom:0;padding-bottom:0}
+.list h3{margin:0;font-size:1.125rem;font-weight:500}
+.list p{margin:0;color:var(--muted);grid-column:1;max-width:52ch}
+.list .meta{color:var(--muted);font-size:.9375rem;grid-row:1;grid-column:2;text-align:right;white-space:nowrap}
+.about p{margin:0 0 1rem;max-width:58ch}
+.about p:last-child{margin:0}
+.stack{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin:0;padding:0;list-style:none;color:var(--muted)}
+.contact .mail{font-size:clamp(1.4rem,3.4vw,2.25rem);letter-spacing:-.02em;font-weight:500}
+.contact ul{list-style:none;display:flex;gap:1.5rem;margin:1.5rem 0 0;padding:0;flex-wrap:wrap}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+@media (max-width:720px){
+  .hero{padding:4rem 0 3.5rem}
+  section{grid-template-columns:1fr;gap:1rem}
+  .list li{grid-template-columns:1fr}
+  .list .meta{grid-row:auto;grid-column:1;text-align:left;order:-1}
+  nav a.hide-sm{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.wrap{max-width:64rem}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem 1.5rem}
+.card{display:block;text-decoration:none}
+.card h3{margin:.9rem 0 .2rem;font-size:1.0625rem;font-weight:500}
+.card p{margin:0;color:var(--muted);font-size:.9375rem}
+.card:hover h3{color:var(--accent)}
+.shot{margin:0;aspect-ratio:16/10;border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;background:linear-gradient(var(--line),var(--line)) top/100% 1.6rem no-repeat}
+.shot::before{content:"";position:absolute;top:.55rem;left:.7rem;width:.5rem;height:.5rem;border-radius:50%;background:var(--muted);opacity:.5;box-shadow:.8rem 0 0 var(--muted),1.6rem 0 0 var(--muted)}
+.shot span{color:var(--muted);font-size:.9375rem;margin-top:1.6rem}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+
+#theme{width:2.25rem;height:2.25rem;padding:0;display:inline-flex;align-items:center;justify-content:center}
+#theme svg{width:1.1rem;height:1.1rem}
+:root[data-theme="dark"] #theme .moon,:root[data-theme="light"] #theme .sun{display:none}
+nav a[aria-current]{color:var(--ink)}
+[hidden]{display:none!important}
+.page{padding:3rem 0 2rem}.page h1{font-size:clamp(1.8rem,4.5vw,2.75rem);line-height:1.15;letter-spacing:-.025em;font-weight:500;margin:0;max-width:24ch}
+.lead{color:var(--muted);font-size:1.125rem;max-width:50ch;margin:1rem 0 0}
+.prose{max-width:40rem}.prose h1{font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.15;letter-spacing:-.025em;font-weight:500;margin:.5rem 0}
+.prose h2{font-size:1.25rem;font-weight:500;margin:2.25rem 0 .5rem}
+.prose p,.prose li{max-width:62ch}.prose ul{padding-left:1.25rem}.prose li{margin:.35rem 0}
+.muted,.crumb{color:var(--muted)}.crumb{margin:0;font-size:.9375rem}
+.post-link{display:block;text-decoration:none;padding:1.25rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:40rem}
+.post-link h3{margin:0 0 .25rem;font-size:1.25rem;font-weight:500}.post-link p{margin:0;color:var(--muted)}
+.post-link:hover h3{color:var(--accent)}
+.more{margin:2rem 0 0}
+section>div>.grid{margin:0}
+.view>.grid{margin-bottom:4rem}
+.flinks{display:flex;gap:1.25rem;flex-wrap:wrap}.flinks a{color:var(--muted)}
+.hero h1{max-width:20ch}
+@media (max-width:560px){header{flex-wrap:wrap;row-gap:.5rem}nav{width:100%;justify-content:space-between;gap:.75rem}.hero{padding:3rem 0 3rem}}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-        <ul>
-            <li><a href="https://github.com/arribion-link" target="_blank">github</a></li>
-        </ul>
-       </nav>
-       <h1 class="header">Hello World!</h1>
-       <nav>
-        <ul>
-            <li><a href="">twitter</a></li>
-        </ul>
-       </nav>
-    </header>
-    <main>
-        <section>
-            <div class="main-content-container">
-                <div>
-                    <h1 class="name">JEFF MUTETHIA</h1>
-                </div>
-                <p class="occuption">FRONTEND DEVELOPER</p>
-                <div class="buttons">
-                    <button>Download Resume</button>
-                    <button>Contact Me</button>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="work-header">
-                <h1 class="text-center">my work</h1>
-            </div>
-            <div class="work-container">
-              <div>
+<div class="wrap">
+  <header>
+    <a class="name" href="#home">Jeff Mutethia</a>
+    <nav aria-label="Main">
+      <a href="#projects" data-r="projects">Projects</a>
+      <a href="#about" data-r="about">About</a>
+      <a href="#blog" data-r="blog">Blog</a>
+      <button id="theme" type="button" aria-label="Switch between light and dark theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </nav>
+  </header>
 
-              </div>
-              <div>
-                
-              </div>
-              <div>
-                
-              </div>
-              <div>
-                
-              </div>
-              <div>
-                
-              </div>
-              <div>
-                
-              </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; <span id="year">0</span> JEFF MUTETHIA. ALL RIGHTS RESERVED.</p>
-    </footer>
-    <script>
-        const yearElement = document.getElementById("year");
-        const currentYear = new Date().getFullYear();
-        yearElement.textContent = currentYear;
-    </script>
+  <main>
+  <div class="view" id="v-home">
+    <div class="hero">
+      <h1>I build fast, clear websites for businesses in Kenya. <span>Open to new projects.</span></h1>
+      <p>I’m Jeff, Managing Director of Arribion Technologies. We build custom websites for safari operators, real estate firms, clinics and online stores, with M-Pesa, booking and AI built in.</p>
+    </div>
+    <section><h2>Selected work</h2><div><ul class="grid"><li><a class="card" href="https://kapedostudio.vercel.app/"><figure class="shot"><span>Kapedo Studio</span></figure><h3>Kapedo Studio</h3><p>Studio website built to present services and bring in enquiries.</p></a></li><li><a class="card" href="https://gt-online-consults-labs-frontent-v1.vercel.app/"><figure class="shot"><span>GT Online Consults Labs</span></figure><h3>GT Online Consults Labs</h3><p>Online consultation and lab services front end.</p></a></li><li><a class="card" href="https://gefclusive-react-js-ecommerce-expre.vercel.app/"><figure class="shot"><span>Gefclusive</span></figure><h3>Gefclusive</h3><p>E-commerce store built with React.</p></a></li><li><a class="card" href="https://coffee-point-website.vercel.app/"><figure class="shot"><span>Coffee Point</span></figure><h3>Coffee Point</h3><p>Website for a coffee business.</p></a></li></ul><p class="more"><a href="#projects">See all projects</a></p></div></section>
+    <section><h2>About</h2><div class="prose"><p>I’m a developer who cares about the small details: fast load times, readable code and interfaces that don’t get in the way.</p><p>I lead Arribion and work with business owners from first prototype to production. <a href="#about">More about me and Arribion</a>.</p></div></section>
+    <section><h2>Latest writing</h2><div><a class="post-link" href="#post-find-developer"><h3>How to find a good software developer in Kenya</h3><p>What to check, what to ask and which red flags to avoid before you hire.</p></a></div></section>
+  </div>
+
+  <div class="view" id="v-projects" hidden>
+    <div class="page"><h1>Projects</h1><p class="lead">Websites I’ve built through Arribion Technologies for businesses in Kenya. Each card opens the live site.</p></div>
+    <ul class="grid"><li><a class="card" href="https://kapedostudio.vercel.app/"><figure class="shot"><span>Kapedo Studio</span></figure><h3>Kapedo Studio</h3><p>Studio website built to present services and bring in enquiries.</p></a></li><li><a class="card" href="https://gt-online-consults-labs-frontent-v1.vercel.app/"><figure class="shot"><span>GT Online Consults Labs</span></figure><h3>GT Online Consults Labs</h3><p>Online consultation and lab services front end.</p></a></li><li><a class="card" href="https://gefclusive-react-js-ecommerce-expre.vercel.app/"><figure class="shot"><span>Gefclusive</span></figure><h3>Gefclusive</h3><p>E-commerce store built with React.</p></a></li><li><a class="card" href="https://coffee-point-website.vercel.app/"><figure class="shot"><span>Coffee Point</span></figure><h3>Coffee Point</h3><p>Website for a coffee business.</p></a></li><li><a class="card" href="https://simon-plumber.vercel.app/"><figure class="shot"><span>Simon Plumber</span></figure><h3>Simon Plumber</h3><p>Local service website for a plumber.</p></a></li><li><a class="card" href="https://banton-welderscoke.vercel.app/"><figure class="shot"><span>Banton Welders</span></figure><h3>Banton Welders</h3><p>Local service website for a welding business.</p></a></li></ul>
+  </div>
+
+  <div class="view" id="v-about" hidden>
+    <div class="page"><h1>About Jeff Mutethia and Arribion Technologies</h1></div>
+    <div class="prose">
+      <p>I’m Jeff Mutethia, a software developer and the Managing Director of Arribion Technologies, a web development company in Kenya.</p>
+      <p>We build custom websites for safari and tour operators, real estate companies, clinics and online stores. Every site is made to load fast on mobile, rank in search and turn visitors into customers.</p>
+      <h2>What Arribion does</h2>
+      <ul>
+        <li><strong>Custom website development:</strong> designed and built for your business, not a template.</li>
+        <li><strong>M-Pesa and payment gateway integration:</strong> take payments on your site.</li>
+        <li><strong>Online booking:</strong> let customers book and pay without calling.</li>
+        <li><strong>Website redesign:</strong> rebuild an old site so it is faster and easier to use.</li>
+        <li><strong>AI integration:</strong> add AI features to your site and workflow.</li>
+      </ul>
+      <h2>How I work</h2>
+      <p>I start with clear requirements, share progress often and write things down. You get a live site you own, built with tools like React and hosted on modern platforms.</p>
+      <h2>Work with me</h2>
+      <p>Visit <a href="https://www.arribion.com/">arribion.com</a> to start a project, or see <a href="#projects">recent projects</a>.</p>
+    </div>
+  </div>
+
+  <div class="view" id="v-blog" hidden>
+    <div class="page"><h1>Blog</h1><p class="lead">Practical advice on websites and software for businesses in Kenya.</p></div>
+    <a class="post-link" href="#post-find-developer"><h3>How to find a good software developer in Kenya</h3><p>17 November 2026. What to check, what to ask and which red flags to avoid before you hire.</p></a>
+  </div>
+
+  <div class="view" id="v-post-find-developer" hidden>
+    <article class="prose">
+      <p class="crumb"><a href="#blog">Blog</a></p>
+      <h1>How to find a good software developer in Kenya</h1>
+      <p class="muted">By Jeff Mutethia, 17 November 2026</p>
+      <p>Hiring a developer is one of the most important decisions for a new business website or app. A good one saves you money and brings in customers. A bad one leaves you with a slow site you don’t control. Here is how to choose well.</p>
+      <h2>1. Know what you need first</h2>
+      <p>Write down what the site must do: show your services, take bookings, sell products, accept M-Pesa. A clear list lets you compare quotes fairly and stops the project growing without agreement.</p>
+      <h2>2. Look at live work, not just screenshots</h2>
+      <p>Ask for links to real websites. Open them on your phone. Check that they load quickly, look right on a small screen and work properly. Most of your customers will visit on mobile.</p>
+      <h2>3. Check experience in your industry</h2>
+      <p>A developer who has built booking sites for tour operators will understand your needs faster than someone who has only built blogs. Ask what they have built that is close to your business.</p>
+      <h2>4. Ask the right questions</h2>
+      <ul>
+        <li>Who owns the code, the domain and the hosting account?</li>
+        <li>Can you integrate M-Pesa or other payment gateways?</li>
+        <li>How will the site be set up to appear in Google search?</li>
+        <li>What happens after launch if something breaks?</li>
+        <li>How long will it take, and how often will I see progress?</li>
+      </ul>
+      <h2>5. Agree scope, price and timeline in writing</h2>
+      <p>A short written agreement should list the pages and features, the total cost, the payment schedule and the delivery date. Pay in stages tied to progress, not everything upfront.</p>
+      <h2>6. Watch for red flags</h2>
+      <ul>
+        <li>No live examples, or examples they can’t explain.</li>
+        <li>A price far below everyone else’s.</li>
+        <li>Pressure to pay in full before any work is shown.</li>
+        <li>No clear answer on who owns the website.</li>
+        <li>Slow or vague replies before you’ve even hired them.</li>
+      </ul>
+      <h2>7. Choose someone you can talk to</h2>
+      <p>Your website will need updates over time. Pick a developer who explains things simply, answers quickly and is still reachable after the launch.</p>
+      <h2>Need a developer?</h2>
+      <p>At Arribion Technologies we build websites for businesses across Kenya. See <a href="#projects">our projects</a> or get in touch at <a href="https://www.arribion.com/">arribion.com</a>.</p>
+    </article>
+  </div>
+  </main>
+
+  <footer>
+    <span>© 2026 Jeff Mutethia, Arribion Technologies</span>
+    <span class="flinks"><a href="https://www.arribion.com/">arribion.com</a><a href="https://github.com/arribion">GitHub</a><a href="https://www.facebook.com/Arribion/">Facebook</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  var dark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+  try{var st=localStorage.getItem('theme');if(st)dark=(st==='dark')}catch(e){}
+  function apply(){root.setAttribute('data-theme',dark?'dark':'light');btn.setAttribute('aria-pressed',dark)}
+  apply();
+  btn.addEventListener('click',function(){dark=!dark;apply();try{localStorage.setItem('theme',dark?'dark':'light')}catch(e){}});
+
+  var meta={
+    home:['Jeff Mutethia – Managing Director, Arribion Technologies','Jeff Mutethia builds fast, clear websites for businesses in Kenya with M-Pesa, booking and AI integration.'],
+    projects:['Projects – Jeff Mutethia, Arribion Technologies','Websites built by Arribion Technologies for businesses in Kenya: studios, e-commerce, clinics and local services.'],
+    about:['About Jeff Mutethia and Arribion Technologies – Web Development in Kenya','Arribion Technologies builds custom websites in Kenya for safari operators, real estate, clinics and online stores, led by Managing Director Jeff Mutethia.'],
+    blog:['Blog – Jeff Mutethia','Practical advice on websites and software for businesses in Kenya.'],
+    'post-find-developer':['How to find a good software developer in Kenya','A practical guide to hiring a software developer in Kenya: what to check, what to ask and red flags to avoid.']
+  };
+  var md=document.querySelector('meta[name=description]');
+  function route(){
+    var h=location.hash.slice(1);if(!meta[h])h='home';
+    document.querySelectorAll('.view').forEach(function(v){v.hidden=v.id!=='v-'+h});
+    var key=h==='post-find-developer'?'blog':h;
+    document.querySelectorAll('nav a[data-r]').forEach(function(a){
+      if(a.dataset.r===key)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+    document.title=meta[h][0];if(md)md.setAttribute('content',meta[h][1]);
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);route();
+})();
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Arribion Technologies","url":"https://www.arribion.com/","founder":{"@type":"Person","name":"Jeff Mutethia","jobTitle":"Managing Director"},"areaServed":"KE","description":"Website development in Kenya for safari operators, real estate, clinics and online stores."}</script>
 </body>
 </html>
